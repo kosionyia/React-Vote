@@ -26,33 +26,39 @@ const {
 
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/4 top-0 h-[500px] w-[500px] rounded-full bg-violet-600/10 blur-[140px]" />
+        <div className="absolute left-1/4 top-0 h-125 w-125 rounded-full bg-amber-600/10 blur-[140px]" />
 
-        <div className="absolute right-0 top-[35%] h-[400px] w-[400px] rounded-full bg-cyan-500/5 blur-[140px]" />
+        <div className="absolute right-0 top-[35%] h-100 w-100 rounded-full bg-cyan-500/5 blur-[140px]" />
 
-        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-fuchsia-500/5 blur-[140px]" />
+        <div className="absolute bottom-0 left-0 h-100 w-100 rounded-full bg-fuchsia-500/5 blur-[140px]" />
       </div>
 
-      {/* Header */}
-      <header className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6">
-        <img
-          src="https://res.cloudinary.com/jp3wixzz/image/upload/v1786939437/apf-logo_r6azk9.png"
-          alt="VOTE//24"
-          className="h-10 w-auto"
-        />
-        <h1 className="text-xl font-black tracking-tight">
-          VOTE<span className="text-[#EE5E3B]">Hackathon3.0</span>HeadOfCohort
-        </h1>
+     {/* Header */}
+<header className="relative mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-6">
+  <div className="flex items-center justify-between">
+    
+    <img
+      src="https://res.cloudinary.com/jp3wixzz/image/upload/v1786939437/apf-logo_r6azk9.png"
+      alt="VOTE//24"
+      className="h-9 w-auto sm:h-10"
+    />
 
-        <div className="flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-4 py-2">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-          <span className="text-xs font-medium text-zinc-300">
-            LIVE
-          </span>
-        </div>
-      </header>
 
-      {/* Hero */}
+    <div className="flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-3 py-2 sm:px-4">
+      <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+      <span className="text-xs font-medium text-zinc-300">
+        LIVE
+      </span>
+    </div>
+  </div>
+
+  <h1 className="mt-4 text-center text-lg font-black leading-tight tracking-tight sm:absolute sm:left-1/2 sm:top-1/2 sm:mt-0 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:text-xl">
+  VOTE
+  <span className="text-[#EE5E3B]">Hackathon3.0</span>
+  <span className="block sm:inline">HeadOfCohort</span>
+</h1>
+</header>
+
       <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16">
         <div className="max-w-3xl">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#EE5E3B]">
@@ -82,18 +88,18 @@ const {
               Step 01
             </p>
 
-            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            {/* <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Enter Your Name
-            </h3>
+            </h3> */}
 
-            <p className="mt-2 text-sm text-zinc-500">
+            <h4 className="mt-2 text-xl text-white">
               Enter your name before casting your vote.
-            </p>
+            </h4>
           </div>
 
           <label
             htmlFor="voterName"
-            className="mb-3 block text-sm font-medium text-zinc-300"
+            className="mb-3 block text-sm font-medium text-zinc-500"
           >
             Your name
           </label>
@@ -105,7 +111,7 @@ const {
   onChange={(event) => setVoterName(event.target.value)}
   placeholder="e.g. Kosi"
   disabled={hasVoted}
-  className="w-full rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-[#FED013] focus:ring-4 focus:ring-violet-500/10 disabled:cursor-not-allowed disabled:opacity-50"
+  className="w-full rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-[#FED013] focus:ring-4 focus:ring-amber-500/10 disabled:cursor-not-allowed disabled:opacity-50"
 />        </div>
       </section>
 
